@@ -1,9 +1,9 @@
 M X1 0
-L 100 0
-L 100 Y2
-L X2 Y2
-L X2 80
-L 0 80
-L 0 X1
-L X1 Y1
-L X1 0
+L W 0
+L W H-Y2
+L W-X2 H-Y2
+L 70 80
+L 0 81
+L 0 30
+L 30 30
+L 30 0
