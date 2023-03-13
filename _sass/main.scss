@@ -87,4 +87,43 @@
         -ms-filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.75));
         -o-filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.75));
     }
+
+    #player {
+        padding-top: 1rem;
+
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+            gap: 0.3rem;
+
+            width: 100%;
+
+            button {
+                border: none;
+                cursor: pointer;
+                appearance: none;
+                background-color: inherit;
+
+                filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.75));
+                -webkit-filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.75));
+                -moz-filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.75));
+                -ms-filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.75));
+                -o-filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.75));
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+        .screen {
+            width: 100%;
+            padding-top: 0.2rem;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
 }
