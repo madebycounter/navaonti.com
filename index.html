@@ -2,6 +2,32 @@
 layout: default
 ---
 
-<div>
-    
+<div class="interface">
+    <div class="banner" id="banner">
+        <img src="/assets/img/banner.gif" />
+    </div>
 </div>
+
+<svg width="0" height="0">
+    <defs>
+        <clipPath id="clip-path">
+            <path
+                id="clip-path-path"
+                d="M 42 0 L 95 0 C 98 0 100 2 100 5 L 100 52 C 100 55 98 57 95 57 L 77
+                57 C 74 57 72 59 72 62 L 72 80 C 72 83 70 85 67 85 L 5 85 C 2 85
+                0 83 0 80 L 0 29 C 0 26 2 24 5 24 L 33 24 C 36 24 38 22 38 19 L
+                38 4 C 38 2 40 0 42 0"
+            />
+        </clipPath>
+    </defs>
+</svg>
+
+<script>
+    function resizeHandler() {
+        var width = $("#banner").width();
+        $("#clip-path-path").attr("transform", `scale(${width / 100})`);
+    }
+
+    $(window).resize(resizeHandler);
+    $(window).on("load", resizeHandler);
+</script>
