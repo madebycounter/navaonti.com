@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: 'en-US' }}">
+    <head>
+        <title>{{ site.title }}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="utf-8" />
 
-<head>
-    <title>{{ site.title }}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta charset="utf-8" />
+        <script
+            src="/assets/js/jquery-3.6.0.min.js"
+            type="text/javascript"
+        ></script>
 
-    <link href="/assets/css/main.css" rel="stylesheet" />
-</head>
+        <link href="/assets/css/main.css" rel="stylesheet" />
+    </head>
 
-<body>
-    {{ content }}
-</body>
-
+    <body>
+        {{ content }}
+    </body>
 </html>
