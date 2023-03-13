@@ -2,7 +2,7 @@
     font-family: "VCR OSD Mono";
     src: url("/assets/font/VCROSDMono.woff2") format("woff2"),
         url("/assets/font/VCROSDMono.woff") format("woff");
-    font-weight: normal;
+    font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
@@ -119,11 +119,79 @@
 
         .screen {
             width: 100%;
-            padding-top: 0.2rem;
+            position: relative;
 
             img {
+                position: absolute;
                 width: 100%;
+                height: 2.6rem;
             }
+
+            .marquee {
+                position: absolute;
+                width: 100%;
+                height: 2.6rem;
+
+                overflow: hidden;
+
+                mask-image: linear-gradient(
+                    to right,
+                    rgba(0, 0, 0, 0) 2%,
+                    rgba(255, 255, 255, 1) 10%,
+                    rgba(255, 255, 255, 1) 90%,
+                    rgba(0, 0, 0, 0) 98%
+                );
+
+                -webkit-mask-image: linear-gradient(
+                    to right,
+                    rgba(0, 0, 0, 0) 2%,
+                    rgba(255, 255, 255, 1) 10%,
+                    rgba(255, 255, 255, 1) 90%,
+                    rgba(0, 0, 0, 0) 98%
+                );
+
+                .wrapper {
+                    animation: marqueeScroll 20s linear infinite;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    display: inline-block;
+
+                    p {
+                        padding: 0.55rem 0;
+                        display: inline-block;
+                        color: white;
+                        font-size: 1.5rem;
+                        line-height: 1.5rem;
+                    }
+                }
+
+                @keyframes marqueeScroll {
+                    0% {
+                        transform: translate3d(0, 0, 0);
+                    }
+                    100% {
+                        transform: translate3d(-50%, 0, 0);
+                    }
+                }
+            }
+
+            // h3 {
+            //     position: absolute;
+            //     color: white;
+            //     top: 0.75rem;
+            //     left: 0.4rem;
+            //     width: calc(100% - 0.8rem);
+            //     height: 2rem;
+            //     text-overflow: clip;
+
+            //     mask-image: linear-gradient(
+            //         to right,
+            //         rgba(0, 0, 0, 0) 0%,
+            //         rgba(255, 255, 255, 1) 10%,
+            //         rgba(255, 255, 255, 1) 90%,
+            //         rgba(0, 0, 0, 0) 100%
+            //     );
+            // }
         }
     }
 }

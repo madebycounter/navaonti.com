@@ -1,5 +1,7 @@
 function resizeHandler() {
     updateClipMask();
+    // calculateMaxChars();
+    // drawPlayer();
 }
 
 $(window).on("resize", resizeHandler);
