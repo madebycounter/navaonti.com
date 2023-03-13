@@ -18,8 +18,8 @@ function updateClipMask() {
     };
 
     var bevel = {
-        d: svg.w * 0.03,
-        m: svg.w * 0.03 * 0.66,
+        d: 12,
+        m: 8,
     };
 
     // prettier-ignore
