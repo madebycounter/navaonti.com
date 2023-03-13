@@ -14,20 +14,55 @@
 }
 
 .interface {
+    position: relative;
     width: calc(100% - 2rem);
     min-height: 100vh;
     background-image: url("/assets/img/blackmetal.png");
     background-repeat: repeat;
     background-size: 300px;
     padding: 1rem;
-    position: relative;
 
-    .banner {
+    #banner {
+        position: relative;
         width: 100%;
 
-        img {
+        div {
+            position: absolute;
+
+            .cover {
+                width: 100%;
+                display: block;
+            }
+        }
+
+        .gif {
             width: 100%;
             clip-path: url("#clip-path");
+        }
+
+        .screen1 {
+            left: -1rem;
+            width: 150px;
+
+            img {
+                position: absolute;
+            }
+
+            h1 {
+                position: absolute;
+                top: 0.6rem;
+                left: 1rem;
+
+                color: white;
+                line-height: 1.9rem;
+                font-size: 2.5rem;
+            }
+        }
+
+        .screen2 {
+            width: 100px;
+            right: -1rem;
+            bottom: 0;
         }
 
         filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.75));
