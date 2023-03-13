@@ -79,6 +79,13 @@
             width: 100px;
             right: -1rem;
             bottom: 0;
+
+            .album {
+                position: absolute;
+                top: 0.5rem;
+                left: 1rem;
+                width: 70%;
+            }
         }
 
         filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.75));
