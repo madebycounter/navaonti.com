@@ -63,13 +63,26 @@ layout: default
     </div>
 
     <div id="desktop">
-        <div class="screen">
+        <div class="screen" id="_desktop_screen">
             <div id="_wallpaper" class="wallpaper"></div>
+
+            <div class="links" id="_desktop_links">
+                <!-- prettier-ignore -->
+                {% for item in site.data.links %}
+                <div>
+                    <a href="{{ item.url }}">
+                        <img src="{{ item.img }}" />
+                    </a>
+
+                    <p>{{ item.name | upcase }}</p>
+                </div>
+                {% endfor %}
+            </div>
 
             <img class="speaker1" src="/assets/img/speaker.png" />
             <img class="speaker2" src="/assets/img/speaker.png" />
 
-            <p>/counter</p>
+            <p class="footer">/counter</p>
         </div>
 
         <svg width="0" height="0">

@@ -71,14 +71,6 @@ function updateBannerClipMask() {
 }
 
 function updateDesktopClipMask() {
-    var width = $("#_wallpaper").width();
-    var height = $("#_wallpaper").height();
-
-    var svg = {
-        w: width,
-        h: height,
-    };
-
     var cut = {
         w: 130,
         h: 115,
@@ -87,6 +79,14 @@ function updateDesktopClipMask() {
     var bevel = {
         d: 12,
         m: 8,
+    };
+
+    var width = $("#_wallpaper").width();
+    var height = $("#_desktop_links").height() + cut.h + 32;
+
+    var svg = {
+        w: width,
+        h: height,
     };
 
     // prettier-ignore
@@ -133,4 +133,5 @@ function updateDesktopClipMask() {
     console.log(data);
 
     $("#_desktop_path").attr("d", data);
+    $("#_desktop_screen").height(svg.h);
 }

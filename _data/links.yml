@@ -1,0 +1,27 @@
+- name: Instagram
+  img: /assets/img/instagram.png
+  url: https://www.instagram.com/thefuturefaceof/
+
+- name: YouTube
+  img: /assets/img/youtube.png
+  url: https://www.youtube.com/channel/UCdoakTyU2QALVMSL5AVebLg
+
+- name: Spotify
+  img: /assets/img/spotify.png
+  url: https://open.spotify.com/artist/6UbSauhn3obzKrLoPmg9Eh?si=Th_iG24eTka8PNQ391JVqw
+
+- name: SoundCloud
+  img: /assets/img/soundcloud.png
+  url: https://soundcloud.com/navaonti
+
+- name: Apple<br/>Music
+  img: /assets/img/applemusic.png
+  url: https://music.apple.com/us/artist/nava-onti/1654373513
+
+- name: Prime<br/>Music
+  img: /assets/img/primemusic.png
+  url: https://music.amazon.com/artists/B0BM97VSPC/nava-onti
+
+- name: Bandcamp
+  img: /assets/img/bandcamp.png
+  url: https://navaonti.bandcamp.com/
