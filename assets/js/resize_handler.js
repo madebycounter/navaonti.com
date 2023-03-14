@@ -1,7 +1,6 @@
 function resizeHandler() {
-    updateClipMask();
-    // calculateMaxChars();
-    // drawPlayer();
+    updateBannerClipMask();
+    updateDesktopClipMask();
 }
 
 $(window).on("resize", resizeHandler);
