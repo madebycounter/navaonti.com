@@ -13,6 +13,10 @@
     font-family: "VCR OSD Mono";
 }
 
+body {
+    background-color: black;
+}
+
 .interface {
     position: relative;
     width: calc(100% - 2rem);
