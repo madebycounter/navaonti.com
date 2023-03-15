@@ -130,8 +130,6 @@ function updateDesktopClipMask() {
             ${bevel.d} 0
     `;
 
-    console.log(data);
-
     $("#_desktop_path").attr("d", data);
     $("#_desktop_screen").height(svg.h);
 }

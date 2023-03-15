@@ -264,3 +264,19 @@ body {
         }
     }
 }
+
+.loader {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+
+    padding: 1rem;
+
+    background-color: black;
+
+    h1 {
+        font-family: "Courier New", Courier, monospace;
+        color: white;
+    }
+}
