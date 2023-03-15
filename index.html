@@ -19,7 +19,11 @@ layout: default
 
         <div class="screen2">
             <img class="cover" src="/assets/img/screen_album.png" />
-            <img class="album" src="/assets/img/album_future_face_of.gif" />
+            <img
+                id="_player_album"
+                class="album"
+                src="/assets/img/album_future_face_of.gif"
+            />
         </div>
 
         <svg width="0" height="0">
@@ -33,19 +37,23 @@ layout: default
 
     <div id="player">
         <div class="controls">
-            <button class="_player_button" which="back">
+            <button id="_player_btn_back" class="_player_button" which="back">
                 <img id="_player_back" src="/assets/img/btn_back.png" />
             </button>
 
-            <button class="_player_button" which="play">
+            <button id="_player_btn_play" class="_player_button" which="play">
                 <img id="_player_play" src="/assets/img/btn_play.png" />
             </button>
 
-            <button class="_player_button" which="pause">
+            <button id="_player_btn_pause" class="_player_button" which="pause">
                 <img id="_player_pause" src="/assets/img/btn_pause.png" />
             </button>
 
-            <button class="_player_button" which="forward">
+            <button
+                id="_player_btn_forward"
+                class="_player_button"
+                which="forward"
+            >
                 <img id="_player_forward" src="/assets/img/btn_forward.png" />
             </button>
         </div>
@@ -54,9 +62,9 @@ layout: default
             <img src="/assets/img/screen_nowplaying.png" />
             <div class="marquee">
                 <div class="wrapper">
-                    <p>CHUMBAWAMBA - FUNNY BABY ALBUM!</p>
-                    <p>CHUMBAWAMBA - FUNNY BABY ALBUM!</p>
-                    <p>CHUMBAWAMBA - FUNNY BABY ALBUM!</p>
+                    <p class="_player_name">CHUMBAWAMBA - FUNNY BABY ALBUM!</p>
+                    <p class="_player_name">CHUMBAWAMBA - FUNNY BABY ALBUM!</p>
+                    <p class="_player_name">CHUMBAWAMBA - FUNNY BABY ALBUM!</p>
                 </div>
             </div>
         </div>
