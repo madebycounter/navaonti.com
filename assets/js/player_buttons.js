@@ -39,7 +39,6 @@ $(() => {
 
     $("#_player_btn_back").click(() => {
         if (audioPlayer) audioPlayer.pause();
-        playerPlaying = false;
 
         playerIndex--;
         if (playerIndex < 0) playerIndex = PLAYER_TRACKS.length - 1;
@@ -48,16 +47,17 @@ $(() => {
 
         updatePlayer(playerSelected);
         audioPlayer = playMusic(playerSelected.url);
+        playerPlaying = true;
     });
 
     $("#_player_btn_forward").click(() => {
         if (audioPlayer) audioPlayer.pause();
-        playerPlaying = false;
         playerIndex = (playerIndex + 1) % PLAYER_TRACKS.length;
         playerSelected = PLAYER_TRACKS[playerIndex];
 
         updatePlayer(playerSelected);
         audioPlayer = playMusic(playerSelected.url);
+        playerPlaying = true;
     });
 
     $("#_player_btn_play").click(() => {
