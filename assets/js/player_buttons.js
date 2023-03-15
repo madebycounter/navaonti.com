@@ -1,6 +1,11 @@
-function updatePlayer(selected) {
-    $("._player_name").text(selected.title);
-    $("#_player_album").attr("src", selected.cover);
+function updateAlbum(url) {
+    if ($("#_player_album").attr("src") != url) {
+        $("#_player_album").attr("src", url);
+    }
+}
+
+function updateScreen(title) {
+    $("._player_name").text(title);
 }
 
 function playMusic(source) {
@@ -35,7 +40,7 @@ $(() => {
     var playerSelected = PLAYER_TRACKS[playerIndex];
     var playerPlaying = false;
     var audioPlayer = null;
-    updatePlayer(playerSelected);
+    updateAlbum(playerSelected.cover);
 
     $("#_player_btn_back").click(() => {
         if (audioPlayer) audioPlayer.pause();
@@ -45,7 +50,8 @@ $(() => {
 
         playerSelected = PLAYER_TRACKS[playerIndex];
 
-        updatePlayer(playerSelected);
+        updateScreen(playerSelected.title);
+        updateAlbum(playerSelected.cover);
         audioPlayer = playMusic(playerSelected.url);
         playerPlaying = true;
     });
@@ -55,12 +61,16 @@ $(() => {
         playerIndex = (playerIndex + 1) % PLAYER_TRACKS.length;
         playerSelected = PLAYER_TRACKS[playerIndex];
 
-        updatePlayer(playerSelected);
+        updateScreen(playerSelected.title);
+        updateAlbum(playerSelected.cover);
         audioPlayer = playMusic(playerSelected.url);
         playerPlaying = true;
     });
 
     $("#_player_btn_play").click(() => {
+        updateScreen(playerSelected.title);
+        updateAlbum(playerSelected.cover);
+
         if (playerPlaying) {
             audioPlayer.play();
         } else {
