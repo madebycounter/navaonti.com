@@ -5,20 +5,32 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charset="utf-8" />
 
-        <script
-            src="/assets/js/lib/jquery-3.6.0.min.js"
-            type="text/javascript"
-        ></script>
-
-        <script src="/assets/js/clip_mask.js"></script>
-        <script src="/assets/js/date_time.js"></script>
-        <script src="/assets/js/player_buttons.js"></script>
-        <script src="/assets/js/resize_handler.js"></script>
-
         <link href="/assets/css/main.css" rel="stylesheet" />
     </head>
 
     <body>
         {{ content }}
+
+        <script
+            src="/assets/js/lib/jquery-3.6.0.min.js"
+            type="text/javascript"
+        ></script>
+
+        <script>
+            const PLAYER_TRACKS = [
+                {% for track in site.data.tracks %}
+                {
+                    title: "{{ track.title }}",
+                    url: "{{ track.url }}",
+                    cover: "{{ track.cover }}",
+                },
+                {% endfor %}
+            ]
+        </script>
+
+        <script src="/assets/js/clip_mask.js"></script>
+        <script src="/assets/js/date_time.js"></script>
+        <script src="/assets/js/player_buttons.js"></script>
+        <script src="/assets/js/resize_handler.js"></script>
     </body>
 </html>
