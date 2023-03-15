@@ -227,9 +227,13 @@ body {
 
             .footer {
                 padding-top: 0.5rem;
-                color: white;
                 width: 100%;
                 text-align: center;
+
+                a {
+                    color: white;
+                    text-decoration: none;
+                }
             }
 
             .links {
