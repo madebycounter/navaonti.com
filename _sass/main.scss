@@ -57,6 +57,21 @@ body {
     }
 }
 
+@media screen and (max-width: calc(400px + 6rem)) {
+    #border {
+        display: none;
+    }
+}
+
+#border {
+    position: absolute;
+    border: 3rem solid black;
+    border-image-source: url("/assets/img/device_border.png");
+    border-image-repeat: stretch;
+    border-image-slice: 53 45 53 47;
+    z-index: 10;
+}
+
 .interface {
     margin: 3rem 0;
 
@@ -68,10 +83,6 @@ body {
     background-repeat: repeat;
     background-size: 300px;
     padding: 1rem;
-
-    border: 2rem solid black;
-    border-image: url("/assets/img/device_border.png") 33% repeat;
-    background-clip: padding-box;
 
     #banner {
         position: relative;
