@@ -64,7 +64,7 @@ body {
     padding: 1rem;
 
     border: 2rem solid black;
-    border-image: url("/assets/img/device_border.png") 33% round;
+    border-image: url("/assets/img/device_border.png") 33% repeat;
     background-clip: padding-box;
 
     #banner {
