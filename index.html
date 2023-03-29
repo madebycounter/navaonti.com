@@ -6,105 +6,135 @@ layout: default
     <h1>Loading...</h1>
 </div>
 
-<div class="interface">
-    <div id="banner">
-        <div class="gif">
-            <img class="cover" id="_banner_gif" src="/assets/img/nava.gif" />
-            <h1>
-                <span id="_banner_time"></span><br />
-                <span id="_banner_date"></span>
-            </h1>
-        </div>
+<div class="display">
+    <div class="bg-cover"></div>
 
-        <div class="screen1">
-            <img class="cover" src="/assets/img/screen_navaonti.png" />
-            <h1>NAVA<br />&nbsp;ONTI</h1>
-        </div>
-
-        <div class="screen2">
-            <img class="cover" src="/assets/img/screen_album.png" />
-            <img
-                id="_player_album"
-                class="album"
-                src="/assets/img/album_future_face_of.gif"
-            />
-        </div>
-
-        <svg width="0" height="0">
-            <defs>
-                <clipPath id="banner-clip">
-                    <path id="_banner_path" d="" />
-                </clipPath>
-            </defs>
-        </svg>
-    </div>
-
-    <div id="player">
-        <div class="controls">
-            <button id="_player_btn_back" class="_player_button" which="back">
-                <img id="_player_back" src="/assets/img/btn_back.png" />
-            </button>
-
-            <button id="_player_btn_play" class="_player_button" which="play">
-                <img id="_player_play" src="/assets/img/btn_play.png" />
-            </button>
-
-            <button id="_player_btn_pause" class="_player_button" which="pause">
-                <img id="_player_pause" src="/assets/img/btn_pause.png" />
-            </button>
-
-            <button
-                id="_player_btn_forward"
-                class="_player_button"
-                which="forward"
-            >
-                <img id="_player_forward" src="/assets/img/btn_forward.png" />
-            </button>
-        </div>
-
-        <div class="screen">
-            <img src="/assets/img/screen_nowplaying.png" />
-            <div class="marquee">
-                <div class="wrapper">
-                    <p class="_player_name">NO TRACK PLAYING</p>
-                    <p class="_player_name">NO TRACK PLAYING</p>
-                    <p class="_player_name">NO TRACK PLAYING</p>
+    <div class="device">
+        <div class="interface">
+            <div id="banner">
+                <div class="gif">
+                    <img
+                        class="cover"
+                        id="_banner_gif"
+                        src="/assets/img/nava.gif"
+                    />
+                    <h1>
+                        <span id="_banner_time"></span><br />
+                        <span id="_banner_date"></span>
+                    </h1>
                 </div>
-            </div>
-        </div>
-    </div>
 
-    <div id="desktop">
-        <div class="screen" id="_desktop_screen">
-            <div id="_wallpaper" class="wallpaper"></div>
-
-            <div class="links" id="_desktop_links">
-                <!-- prettier-ignore -->
-                {% for item in site.data.links %}
-                <div>
-                    <a href="{{ item.url }}">
-                        <img src="{{ item.img }}" />
-                    </a>
-
-                    <p>{{ item.name | upcase }}</p>
+                <div class="screen1">
+                    <img class="cover" src="/assets/img/screen_navaonti.png" />
+                    <h1>NAVA<br />&nbsp;ONTI</h1>
                 </div>
-                {% endfor %}
+
+                <div class="screen2">
+                    <img class="cover" src="/assets/img/screen_album.png" />
+                    <img
+                        id="_player_album"
+                        class="album"
+                        src="/assets/img/album_future_face_of.gif"
+                    />
+                </div>
+
+                <svg width="0" height="0">
+                    <defs>
+                        <clipPath id="banner-clip">
+                            <path id="_banner_path" d="" />
+                        </clipPath>
+                    </defs>
+                </svg>
             </div>
 
-            <img class="speaker1" src="/assets/img/speaker.png" />
-            <img class="speaker2" src="/assets/img/speaker.png" />
+            <div id="player">
+                <div class="controls">
+                    <button
+                        id="_player_btn_back"
+                        class="_player_button"
+                        which="back"
+                    >
+                        <img id="_player_back" src="/assets/img/btn_back.png" />
+                    </button>
 
-            <p class="footer">
-                <a target="_blank" href="https://madebycounter.com">/counter</a>
-            </p>
+                    <button
+                        id="_player_btn_play"
+                        class="_player_button"
+                        which="play"
+                    >
+                        <img id="_player_play" src="/assets/img/btn_play.png" />
+                    </button>
+
+                    <button
+                        id="_player_btn_pause"
+                        class="_player_button"
+                        which="pause"
+                    >
+                        <img
+                            id="_player_pause"
+                            src="/assets/img/btn_pause.png"
+                        />
+                    </button>
+
+                    <button
+                        id="_player_btn_forward"
+                        class="_player_button"
+                        which="forward"
+                    >
+                        <img
+                            id="_player_forward"
+                            src="/assets/img/btn_forward.png"
+                        />
+                    </button>
+                </div>
+
+                <div class="screen">
+                    <img src="/assets/img/screen_nowplaying.png" />
+                    <div class="marquee">
+                        <div class="wrapper">
+                            <p class="_player_name">NO TRACK PLAYING</p>
+                            <p class="_player_name">NO TRACK PLAYING</p>
+                            <p class="_player_name">NO TRACK PLAYING</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="desktop">
+                <div class="screen" id="_desktop_screen">
+                    <div id="_wallpaper" class="wallpaper"></div>
+
+                    <div class="links" id="_desktop_links">
+                        <!-- prettier-ignore -->
+                        {% for item in site.data.links %}
+                        <div>
+                            <a href="{{ item.url }}">
+                                <img src="{{ item.img }}" />
+                            </a>
+
+                            <p>{{ item.name | upcase }}</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <img class="speaker1" src="/assets/img/speaker.png" />
+                    <img class="speaker2" src="/assets/img/speaker.png" />
+
+                    <p class="footer">
+                        <a target="_blank" href="https://madebycounter.com"
+                            >/counter</a
+                        >
+                    </p>
+                </div>
+
+                <svg width="0" height="0">
+                    <defs>
+                        <clipPath id="desktop-clip">
+                            <path id="_desktop_path" d="" />
+                        </clipPath>
+                    </defs>
+                </svg>
+            </div>
         </div>
-
-        <svg width="0" height="0">
-            <defs>
-                <clipPath id="desktop-clip">
-                    <path id="_desktop_path" d="" />
-                </clipPath>
-            </defs>
-        </svg>
     </div>
 </div>

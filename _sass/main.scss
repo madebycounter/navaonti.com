@@ -17,14 +17,55 @@ body {
     background-color: black;
 }
 
-.interface {
+.display {
     position: relative;
-    width: calc(100% - 2rem);
-    min-height: 100vh;
+
+    .device {
+        width: 100%;
+        min-height: 100vh;
+
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .bg-cover {
+        width: 100%;
+        height: 100%;
+
+        position: absolute;
+        background-image: url("/assets/img/navadesktop.jpg");
+        background-size: cover;
+        // filter: blur(8px);
+        // -webkit-filter: blur(8px);
+    }
+
+    @media screen and (max-width: calc(400px + 2rem)) {
+        .device {
+            display: block;
+        }
+
+        .interface {
+            border: none;
+            width: calc(100% - 2rem);
+        }
+    }
+}
+
+.interface {
+    max-width: 400px;
+
+    position: relative;
+    width: calc(100% - 6rem);
     background-image: url("/assets/img/bluemetal.png");
     background-repeat: repeat;
     background-size: 300px;
     padding: 1rem;
+
+    border: 2rem solid black;
+    border-image: url("/assets/img/device_border.png") 33% round;
+    background-clip: padding-box;
 
     #banner {
         position: relative;
