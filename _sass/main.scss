@@ -37,11 +37,12 @@ body {
         position: absolute;
         background-image: url("/assets/img/backgrounds/papers.jpg");
         background-size: cover;
+
         filter: blur(8px);
         -webkit-filter: blur(8px);
     }
 
-    @media screen and (max-width: calc(400px + 2rem)) {
+    @media screen and (max-width: calc(400px + 6rem)) {
         .device {
             display: block;
         }
@@ -49,11 +50,16 @@ body {
         .interface {
             border: none;
             width: calc(100% - 2rem);
+            max-width: none;
+            min-height: 100vh;
+            margin: 0;
         }
     }
 }
 
 .interface {
+    margin: 3rem 0;
+
     max-width: 400px;
 
     position: relative;
