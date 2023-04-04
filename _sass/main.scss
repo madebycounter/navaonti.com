@@ -35,7 +35,7 @@ body {
         height: 100%;
 
         position: absolute;
-        background-image: url("/assets/img/backgrounds/papers.jpg");
+        background-image: url("/assets/img/papers.jpg");
         background-size: cover;
 
         filter: blur(8px);
@@ -303,6 +303,8 @@ body {
                 display: grid;
                 grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
                 gap: 1rem;
+
+                width: calc(100% - 2rem);
 
                 div {
                     img {
