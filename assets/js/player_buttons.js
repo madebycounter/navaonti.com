@@ -22,6 +22,14 @@ function playMusic(source) {
 }
 
 $(() => {
+    var firstBlink = setInterval(() => {
+        $(`#_player_play`).attr("src", `/assets/img/btn_play_blink2.png`);
+
+        setTimeout(() => {
+            $(`#_player_play`).attr("src", `/assets/img/btn_play.png`);
+        }, 500);
+    }, 2000);
+
     $("._player_button").click(function () {
         var which = $(this).attr("which");
         var self = this;
@@ -34,6 +42,8 @@ $(() => {
         setTimeout(() => {
             $(`#_player_${which}`).attr("src", `/assets/img/btn_${which}.png`);
         }, 500);
+
+        clearInterval(firstBlink);
     });
 
     var playerIndex = Math.floor(Math.random() * PLAYER_TRACKS.length);
